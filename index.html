@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Drawing Board</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+  <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <div class="container my-4">
+        <!-- Brush Controls -->
+        <div class="row mb-3">
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <label for="brushSize" class="form-label">Brush Size</label>
+            <input type="range" id="brushSize" class="form-range" min="1" max="20" value="5">
+          </div>
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <label for="brushColor" class="form-label">Brush Color</label>
+            <div class="row">
+              <input type="color" id="brushColor" class="form-control form-control-color m-1" 
+                value="#000000" title="Choose your color" >
+              
+              <button type="button" id="undoButton" class="btn btn-danger col-3 m-1" 
+                title="Undo the last action"> &#x21B6;</button>
+             
+              <button type="button" id="redoButton" class="btn btn-warning col-3 m-1"
+               title="Redo the last undone action"> &#x21B7;</button>
+             
+              <button type="button" id="clearButton" class="btn btn-success col-3 m-1"
+               title="Clear the canvas">Clear</button>
+
+              <button type="button" id="eraserButton" class="btn btn-secondary col-3 m-1" title="Eraser">
+                &#128396;</button>
+
+              <button type="button" id="saveButton" class="btn  col-1 mt-1 mb-1" title="export">
+                &#128190;</button>
+            </div>
+            
+            
+          </div>
+          <div class="col-lg-4 col-sm-12 mb-2">
+            <label for="shape" class="form-label">Brush Shape</label>
+            <select id="shape" class="form-select">
+              <option value="round" selected>Round</option>
+              <option value="square">Square</option>
+              
+            </select>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Canvas -->
+      <div class="holder text-center">
+        <canvas id="myCanvas" height="400px" width="800" style="border: 1px solid black;"></canvas>
+      </div>
+    
+      
+    <script src="script.js"></script>
+
+  </body>
+</html>

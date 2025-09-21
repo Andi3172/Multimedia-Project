@@ -1,0 +1,46 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+#saveButton{
+    background-color: rgb(239, 243, 219);
+}
+
+#eraserButton.active {
+    background-color: #ffcccc;
+    border: 2px solid #ff0000;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    canvas {
+        width: 95%;
+        height: auto;
+    }
+}
